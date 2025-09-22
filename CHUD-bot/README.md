@@ -16,8 +16,3 @@ This bot takes the role of a **friendly conspiracy theorist**: helpful and infor
 - Same core purpose, but more paranoid and excitable.  
 - Often goes on tangents and connects random dots.  
 - Funny and entertaining, but sometimes distracting.  
-
----
-
-## File Structure  
-
