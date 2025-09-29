@@ -19,7 +19,7 @@ This bot takes the role of a **friendly conspiracy theorist**: helpful and infor
 
 ---
 
-## Reflections  
+## [Reflections](./reflection.md)  
 
 ### Chud v1.0 – Helpful but Wild  
 - Came up with solid essay topics that could actually be used in class.  
