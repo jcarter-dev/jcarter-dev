@@ -22,6 +22,16 @@ At the same time, I’m expanding into **back-end development** so I can bring m
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
+## Projects / Assignments
+
+- **[C.H.U.D Bot](https://github.com/jcarter-dev/jcarter-dev/tree/main/CHUD-bot)**  
+  *C.H.U.D. (Connecting Hidden Unknown Dots)* – A custom AI agent designed for a class assignment.  
+  - Plays the role of a **friendly conspiracy theorist** 🤯  
+  - Provides helpful answers with a hidden-agenda twist  
+  - Versions:  
+    - **v1.0** – Helpful but Wild  
+    - **v2.0** – Amped-Up Quirk
+
 ## Fun Fact  
 I have a pet jumping spider named **Pogo** 🕷️ and a dog named **Butter** 🐕.  
 I never thought I’d have a spider and a dog as roommates, but here we are 😅. 
