@@ -34,7 +34,7 @@ Repo folder:
 
 ---
 
-## AI UI Theme Generator (MVP) — CSC-113 Assignment
+## AI UI Theme Generator (MVP)
 This is my working MVP for the semester — built through rapid prototyping, iteration logs, and GitHub workflows.
 
 ### 🔗 Live Demo (GitHub Pages)
