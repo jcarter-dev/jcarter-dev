@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI UI Theme Generator for Java Swing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #111827;
+      --accent: #22d3ee;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2933;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --shadow-soft: 0 18px 35px rgba(15, 23, 42, 0.7);
+      --transition-fast: 0.18s ease-out;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 980px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(12,148,136,0.16));
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.25);
+      padding: 26px 26px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56,189,248,0.16), transparent 55%),
+        radial-gradient(circle at 120% 20%, rgba(244,114,182,0.16), transparent 50%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .shell-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.03em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    header h1 span.logo-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(15,118,110,0.18);
+      border: 1px solid rgba(45,212,191,0.4);
+      color: #a5f3fc;
+    }
+
+    header p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 340px;
+      text-align: right;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 840px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header p {
+        text-align: left;
+      }
+    }
+
+    .card {
+      background: rgba(15,23,42,0.92);
+      border-radius: var(--radius-lg);
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(22px);
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-title span.badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--text-muted);
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 76px;
+      resize: vertical;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148,163,184,0.5);
+      padding: 9px 10px;
+      background: rgba(15,23,42,0.85);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      outline: none;
+      line-height: 1.4;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+
+    textarea:focus {
+      border-color: rgba(56,189,248,0.85);
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.5);
+      background: rgba(15,23,42,0.98);
+    }
+
+    .hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .btn-primary {
+      border: none;
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #06b6d4, #22c55e);
+      color: #0b1120;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(8, 47, 73, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity 0.12s ease-in-out;
+    }
+
+    .btn-primary span.spark {
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(8, 47, 73, 0.8);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 26px rgba(8, 47, 73, 0.7);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(148,163,184,0.8);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      background: rgba(15,23,42,0.9);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15,23,42,1);
+      border-color: rgba(248,250,252,0.75);
+      color: #e5e7eb;
+    }
+
+    .status-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .status-text strong {
+      color: #a5f3fc;
+      font-weight: 500;
+    }
+
+    /* Output side */
+
+    .preview-layout {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+
+    .color-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .swatch {
+      flex: 1 1 90px;
+      min-width: 90px;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 0.7rem;
+      border: 1px solid rgba(15,23,42,0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .swatch-label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .swatch-code {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: #e5e7eb;
+    }
+
+    .swatch-chip {
+      margin-top: 4px;
+      border-radius: 999px;
+      height: 10px;
+      border: 1px solid rgba(15,23,42,0.8);
+    }
+
+    .mock-window {
+      margin-top: 4px;
+      border-radius: 12px;
+      border: 1px solid rgba(15,23,42,0.9);
+      overflow: hidden;
+      background: #0b1120;
+    }
+
+    .mock-titlebar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      background: linear-gradient(to right, rgba(15,23,42,0.95), rgba(15,23,42,0.8));
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .mock-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .mock-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(51,65,85,0.9);
+    }
+
+    .mock-body {
+      padding: 12px 12px 14px;
+      font-size: 0.8rem;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 520px) {
+      .mock-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mock-sidebar {
+      border-radius: 9px;
+      padding: 8px;
+      border: 1px solid rgba(15,23,42,0.9);
+      background: rgba(15,23,42,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.75rem;
+    }
+
+    .mock-tab {
+      padding: 4px 7px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .mock-tab span.label {
+      font-size: 0.75rem;
+    }
+
+    .mock-tab span.key {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      opacity: 0.75;
+    }
+
+    .mock-tab.active {
+      border-color: rgba(248,250,252,0.9);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.7);
+    }
+
+    .mock-main {
+      border-radius: 9px;
+      padding: 8px;
+      border: 1px solid rgba(15,23,42,0.9);
+      background: rgba(15,23,42,0.96);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mock-main h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .mock-field {
+      display: grid;
+      grid-template-columns: 0.7fr 1.1fr;
+      gap: 6px;
+      font-size: 0.75rem;
+      align-items: center;
+    }
+
+    .mock-field label {
+      margin: 0;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .mock-input {
+      border-radius: 7px;
+      border: 1px solid rgba(30,64,175,0.6);
+      padding: 4px 6px;
+      background: rgba(15,23,42,0.96);
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      color: var(--text-main);
+    }
+
+    .mock-button-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .mock-button {
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 0.73rem;
+      border: 1px solid rgba(148,163,184,0.8);
+      background: rgba(15,23,42,0.92);
+      color: var(--text-main);
+    }
+
+    .mock-button.primary {
+      border-color: rgba(248,250,252,0.9);
+    }
+
+    .snippet-box {
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px dashed rgba(148,163,184,0.8);
+      background: rgba(15,23,42,0.9);
+      padding: 8px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: #e5e7eb;
+      position: relative;
+      overflow-x: auto;
+    }
+
+    .snippet-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .snippet-actions .status {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="shell-inner">
+      <header>
+        <h1>
+          <span class="logo-pill">MVP • Swing Themes</span>
+          AI UI Theme Generator
+        </h1>
+        <p>
+          Describe a vibe, get a color system and a tiny Swing-style mockup. Copy the theme snippet straight into your Java project.
+        </p>
+      </header>
+
+      <main>
+        <!-- Left: input & controls -->
+        <section class="card">
+          <div class="card-title">
+            <span>1. Describe your theme</span>
+            <span class="badge">Prompt → Palette</span>
+          </div>
+          <p class="card-subtitle">
+            Use short phrases like <em>"dark mode with cyan accents"</em> or <em>"teal glass panel"</em>.
+          </p>
+
+          <label for="themeInput">Theme description</label>
+          <textarea id="themeInput" placeholder="e.g. teal glassmorphism, dark header, soft cyan glow"></textarea>
+          <p class="hint">
+            The generator looks for keywords like <code>teal</code>, <code>dark</code>, <code>retro</code>, <code>terminal</code>,
+            <code>sunset</code>, <code>neon</code>, and <code>forest</code>. If it’s not sure, it falls back to a clean default.
+          </p>
+
+          <div class="controls">
+            <button id="generateBtn" class="btn-primary">
+              <span class="spark">⚡</span>
+              Generate Theme
+            </button>
+            <span class="status-text">
+              Active preset: <strong id="presetName">default</strong>
+            </span>
+          </div>
+        </section>
+
+        <!-- Right: preview & output -->
+        <section class="card">
+          <div class="card-title">
+            <span>2. Preview & Swing snippet</span>
+            <span class="badge">Read-only prototype</span>
+          </div>
+          <p class="card-subtitle">
+            Colors update here. When you’re happy, copy the Java snippet into your UI constants file.
+          </p>
+
+          <div class="preview-layout" id="previewArea">
+            <!-- color swatches + mock window will be here -->
+          </div>
+
+          <div class="snippet-actions">
+            <button id="copyBtn" class="btn-secondary">
+              Copy theme snippet
+            </button>
+            <span class="status status-text" id="copyStatus">
+              Snippet not copied yet.
+            </span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Simple keyword-based theme system (rules instead of "real" AI)
+    const THEMES = [
+      {
+        id: "teal-glass",
+        label: "Teal glassmorphism",
+        match: ["teal", "glass", "aqua"],
+        colors: {
+          primary: "#0f9fbf",
+          secondary: "#062b3a",
+          accent: "#5eead4",
+          background: "#020617"
+        }
+      },
+      {
+        id: "dark-cyan",
+        label: "Dark mode cyan",
+        match: ["dark", "night", "cyber", "neon"],
+        colors: {
+          primary: "#06b6d4",
+          secondary: "#082f49",
+          accent: "#22c55e",
+          background: "#020617"
+        }
+      },
+      {
+        id: "sunset",
+        label: "Sunset gradients",
+        match: ["sunset", "warm", "orange", "peach"],
+        colors: {
+          primary: "#f97316",
+          secondary: "#1e293b",
+          accent: "#e11d48",
+          background: "#020617"
+        }
+      },
+      {
+        id: "terminal",
+        label: "Retro terminal",
+        match: ["terminal", "retro", "matrix", "hacker"],
+        colors: {
+          primary: "#22c55e",
+          secondary: "#052e16",
+          accent: "#bef264",
+          background: "#020617"
+        }
+      },
+      {
+        id: "forest",
+        label: "Forest calm",
+        match: ["forest", "green", "moss"],
+        colors: {
+          primary: "#16a34a",
+          secondary: "#022c22",
+          accent: "#4ade80",
+          background: "#020617"
+        }
+      }
+    ];
+
+    const DEFAULT_THEME = {
+      id: "default",
+      label: "Default neutral teal",
+      colors: {
+        primary: "#38bdf8",
+        secondary: "#0f172a",
+        accent: "#22c55e",
+        background: "#020617"
+      }
+    };
+
+    const themeInput = document.getElementById("themeInput");
+    const generateBtn = document.getElementById("generateBtn");
+    const presetName = document.getElementById("presetName");
+    const previewArea = document.getElementById("previewArea");
+    const copyBtn = document.getElementById("copyBtn");
+    const copyStatus = document.getElementById("copyStatus");
+
+    function pickTheme(description) {
+      if (!description || !description.trim()) return DEFAULT_THEME;
+
+      const text = description.toLowerCase();
+      for (const theme of THEMES) {
+        if (theme.match.some(keyword => text.includes(keyword))) {
+          return theme;
+        }
+      }
+      return DEFAULT_THEME;
+    }
+
+    function renderPreview(theme) {
+      const { primary, secondary, accent, background } = theme.colors;
+
+      // Color swatches
+      const swatchHtml = `
+        <div class="color-row">
+          ${createSwatch("Primary", primary)}
+          ${createSwatch("Secondary", secondary)}
+          ${createSwatch("Accent", accent)}
+          ${createSwatch("Background", background)}
+        </div>
+      `;
+
+      // Mock Swing-style window
+      const mockHtml = `
+        <div class="mock-window" style="background:${background};">
+          <div class="mock-titlebar" style="border-bottom:1px solid ${secondary};">
+            <div class="mock-dots">
+              <span class="mock-dot" style="background:#f97373;"></span>
+              <span class="mock-dot" style="background:#facc15;"></span>
+              <span class="mock-dot" style="background:#4ade80;"></span>
+            </div>
+            <span>PreviewFrame • Theme demo</span>
+          </div>
+          <div class="mock-body">
+            <aside class="mock-sidebar" style="background:${secondary}; border-color:${primary};">
+              <div class="mock-tab active" style="background:${primary}; color:#0b1120;">
+                <span class="label">Dashboard</span>
+                <span class="key">Alt+D</span>
+              </div>
+              <div class="mock-tab" style="color:#e5e7eb;">
+                <span class="label">Theme</span>
+                <span class="key">Alt+T</span>
+              </div>
+              <div class="mock-tab" style="color:#e5e7eb;">
+                <span class="label">Logs</span>
+                <span class="key">Alt+L</span>
+              </div>
+            </aside>
+            <section class="mock-main" style="border-color:${primary};">
+              <h3 style="color:${accent};">Preview Panel</h3>
+              <div class="mock-field">
+                <label>PRIMARY_HEX</label>
+                <div class="mock-input">${primary}</div>
+              </div>
+              <div class="mock-field">
+                <label>ACCENT_HEX</label>
+                <div class="mock-input">${accent}</div>
+              </div>
+              <div class="mock-field">
+                <label>BACKGROUND</label>
+                <div class="mock-input">${background}</div>
+              </div>
+              <div class="mock-button-row">
+                <button class="mock-button">Cancel</button>
+                <button class="mock-button primary" style="background:${primary}; color:#0b1120;">Apply</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      `;
+
+      // Put together
+      previewArea.innerHTML = `
+        ${swatchHtml}
+        ${mockHtml}
+        <div class="snippet-box" id="snippetBox">
+${generateJavaSnippet(theme.colors).replace(/</g, "&lt;")}
+        </div>
+      `;
+
+      // Also update body background a bit
+      document.body.style.background = `radial-gradient(circle at top left, ${primary}20 0, #020617 40%, #000 100%)`;
+    }
+
+    function createSwatch(label, color) {
+      return `
+        <div class="swatch" style="background: radial-gradient(circle at 0 0, ${color}22, #020617 80%);">
+          <div class="swatch-label">${label}</div>
+          <div class="swatch-code">${color}</div>
+          <div class="swatch-chip" style="background:${color};"></div>
+        </div>
+      `;
+    }
+
+    function generateJavaSnippet(colors) {
+      const { primary, secondary, accent, background } = colors;
+      return `// Generated UI theme snippet
+// UI manager setup.
+
+public static final Color PRIMARY      = new Color(0x${primary.replace("#","")});
+public static final Color SECONDARY    = new Color(0x${secondary.replace("#","")});
+public static final Color ACCENT       = new Color(0x${accent.replace("#","")});
+public static final Color BACKGROUND   = new Color(0x${background.replace("#","")});
+
+// Example usage:
+// button.setBackground(PRIMARY);
+// panel.setBackground(BACKGROUND);
+// label.setForeground(ACCENT);`;
+    }
+
+    function handleGenerate() {
+      const description = themeInput.value;
+      const theme = pickTheme(description);
+      presetName.textContent = theme.label;
+      renderPreview(theme);
+      copyStatus.textContent = "Snippet not copied yet.";
+    }
+
+    async function handleCopy() {
+      const snippetBox = document.getElementById("snippetBox");
+      if (!snippetBox) {
+        copyStatus.textContent = "Nothing to copy yet. Generate a theme first.";
+        return;
+      }
+
+      const text = snippetBox.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyStatus.textContent = "✅ Copied Java theme snippet to clipboard.";
+      } catch (err) {
+        console.error(err);
+        copyStatus.textContent = "Clipboard not available in this browser.";
+      }
+    }
+
+    // Initial render with  theme
+    renderPreview(DEFAULT_THEME);
+
+    generateBtn.addEventListener("click", handleGenerate);
+    copyBtn.addEventListener("click", handleCopy);
+  </script>
+</body>
+</html>
