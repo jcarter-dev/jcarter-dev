@@ -19,7 +19,7 @@ Roughly 2–3 weeks to get a simple version working.
 ## Idea 2: Personal AI Linux Tutor for RHCSA-Style Labs
 
 **Problem/Goal:**  
-My Linux class has a lot of hands-on labs — users, permissions, services, scripting, all of it. Sometimes I run the right command but still feel like I’m only half understanding what’s actually happening. This project would create a small AI tutor that uses my own notes and examples to explain commands in plain language and help me compare my output to what I’m expecting to see.
+My Linux class has a lot of hands-on labs - users, permissions, services, scripting, all of it. Sometimes I run the right command but still feel like I’m only half understanding what’s actually happening. This project would create a small AI tutor that uses my own notes and examples to explain commands in plain language and help me compare my output to what I’m expecting to see.
 
 **AI Tool(s):**  
 Gemini or ChatGPT for explanations; maybe a small local model through Ollama if I decide to try offline use.
@@ -35,7 +35,7 @@ I’m already doing RHCSA-style tasks regularly, so having something that can br
 ## Idea 3: AI UI Theme Generator for Java Swing
 
 **Problem/Goal:**  
-Styling Swing apps can get repetitive, especially when I’m trying to keep everything looking consistent — buttons, headers, backgrounds, gradients, all that. I want an AI tool where I can type something like “dark mode with cyan accents” or “glass theme” and have it generate color values, UI constants, and maybe a sample snippet I can drop straight into my project.
+Styling Swing apps can get repetitive, especially when I’m trying to keep everything looking consistent - buttons, headers, backgrounds, gradients, all that. I want an AI tool where I can type something like “dark mode with cyan accents” or “glass theme” and have it generate color values, UI constants, and maybe a sample snippet I can drop straight into my project.
 
 **AI Tool(s):**  
 ChatGPT or Claude for the theme generation; Java Swing on my end to apply whatever it outputs.
