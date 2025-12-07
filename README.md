@@ -35,7 +35,7 @@ Versions:
 
 ---
 
-### • Project Ideation: Three AI Application Ideas (CSC-113)
+### • Project Ideation: Three AI Application Ideas
 A brainstorming assignment for my AI Fundamentals course where I’m exploring three possible AI projects to build this semester:  
 1. **AI Workflow Assistant for Java Projects** — Helps explain errors, summarize changes, and suggest small code improvements.  
 2. **AI Linux Tutor** — Breaks down commands and lab outputs from my RHCSA-style Linux work so I actually understand what’s going on.  
