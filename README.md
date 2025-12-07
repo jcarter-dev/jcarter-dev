@@ -1,47 +1,55 @@
-# Project Ideation - Joshua Carter
+# Hi, I'm Josh Carter 👋
 
-## Idea 1: AI Workflow Assistant for Java Projects
+## About Me
+I'm a Computer Science student working on my Associate degree and currently taking CSC-113 (AI Fundamentals). I'm curious about how technology and creativity connect, and I’m especially interested in how AI can be used to make learning and development more engaging.
 
-**Problem/Goal:**  
-When I’m working on multi-file Java projects, I spend a lot of time bouncing between fixing compiler errors, cleaning up code, and writing commit messages that explain what I actually changed. The goal of this project is to build a small AI-assisted workflow tool that can summarize recent changes, explain confusing errors, and suggest small refactors or improvements. Instead of just copy-pasting errors into a chat, I want something that fits into my normal coding and GitHub routine.
+## My Foo 💅🏽
+I'm passionate about front-end design and creating clean, user-friendly experiences. I enjoy experimenting with visuals that make projects stand out.  
+At the same time, I’m expanding into back-end development so I can bring my designs to life with real functionality and learn the full stack.
 
-**AI Tool(s):**  
-ChatGPT or Gemini (possibly through their APIs), optionally tied into a simple script or GitHub workflow.
+## Currently Learning
+- 🤖 AI collaboration and prompt engineering  
+- 🔄 GitHub workflows and version control  
+- 🧠 Building my first AI assistants  
 
-**Why This Interests Me:**  
-I’m already writing and refactoring Java code for class, so having an assistant that helps with explanations and summaries would save time and make my projects feel more professional.
+## Tech & Tools
+![AI](https://img.shields.io/badge/AI-black?style=flat&logo=openai)
+![Python](https://img.shields.io/badge/Python-blue?style=flat&logo=python)
+![Java](https://img.shields.io/badge/Java-orange?style=flat&logo=coffeescript)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-blue?style=flat&logo=css3)
+![Git](https://img.shields.io/badge/Git-black?style=flat&logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)
 
-**Rough Scope:**  
-About 2–3 weeks to get a basic version working and integrated into my normal workflow.
+## Projects / Assignments
+
+### • C.H.U.D Bot
+**C.H.U.D. (Connecting Hidden Unknown Dots)** — A custom AI agent designed for a class assignment.  
+🔥 Plays the role of a friendly conspiracy theorist  
+🔍 Provides helpful answers with a hidden-agenda twist  
+
+Versions:
+- v1.0 — Helpful but Wild  
+- v2.0 — Amped-Up Quirk  
 
 ---
 
-## Idea 2: Personal AI Linux Tutor for RHCSA-Style Labs
+### • Project Ideation: Three AI Application Ideas (CSC-113)
+A brainstorming assignment for my AI Fundamentals course where I’m exploring three possible AI projects to build this semester:  
+1. **AI Workflow Assistant for Java Projects** — Helps explain errors, summarize changes, and suggest small code improvements.  
+2. **AI Linux Tutor** — Breaks down commands and lab outputs from my RHCSA-style Linux work so I actually understand what’s going on.  
+3. **AI UI Theme Generator for Java Swing** — Generates colors, gradients, and UI constants based on short theme descriptions (teal, glass, dark mode, etc.).
 
-**Problem/Goal:**  
-In my Linux course, I’m doing a lot of RHCSA-style tasks like managing users, setting permissions, working with services, and writing simple scripts. It’s easy to run a command, get the right output, but not fully understand *why* it worked (or why it didn’t). This project would create a personal AI Linux tutor that uses my own notes and example commands to explain what each step is doing and help compare my output with what I should expect.
-
-**AI Tool(s):**  
-Gemini or ChatGPT for explanations; possibly a local model (like Llama or Mistral through Ollama) for offline practice.
-
-**Why This Interests Me:**  
-I’m already spending a lot of time in the terminal, and having a tutor that speaks my language and uses my notes would help me build real understanding instead of just memorizing commands for the moment.
-
-**Rough Scope:**  
-1–2 weeks for a basic version that explains commands and outputs; up to 3 weeks if I add local/offline model support.
+This is the early planning phase for my capstone-style AI project.
 
 ---
 
-## Idea 3: AI UI Theme Generator for Java Swing
+## Fun Fact
+I have a pet jumping spider named Pogo 🕷️ and a dog named Butter 🐶.  
+I never thought I'd have a spider and a dog as roommates, but here we are 😅.
 
-**Problem/Goal:**  
-Styling Java Swing applications can be repetitive and time-consuming, especially when I’m trying to keep a consistent look across buttons, panels, headers, and dialogs. Right now I manually pick colors, gradients, and fonts, and then hard-code them into multiple classes. This project would use AI to generate theme settings (color palettes, UI constants, and style suggestions) based on a short description like “teal glassmorphism” or “dark mode with cyan accents,” and output ready-to-use values for a Swing project.
-
-**AI Tool(s):**  
-ChatGPT or Claude to generate theme suggestions and color palettes, combined with Java Swing code that reads those values and applies them to components.
-
-**Why This Interests Me:**  
-I like the design side of my projects, and I’ve already spent time playing with different themes. An AI tool that speeds up the boring parts of theming would let me try more styles without rewriting the same code over and over.
-
-**Rough Scope:**  
-About 1–2 weeks for a simple theme generator that outputs constants and example code; more time if I build a small GUI to preview themes.
+## Find Me
+- 📍 Right here on GitHub!  
+- 📧 Student Email: carterj2383@student.faytechcc.edu  
+- ✉️ Personal Email: jcarter.git@gmail.com  
