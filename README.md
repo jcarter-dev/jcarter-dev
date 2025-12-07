@@ -1,33 +1,14 @@
-# Hi, I'm Josh Carter 👋
-
-## About Me
-I'm a Computer Science student working on my Associate degree and currently taking CSC-113 (AI Fundamentals). I'm curious about how technology and creativity connect, and I’m especially interested in how AI can be used to make learning and development more engaging.
-
-## My Foo 💅🏽
-I'm passionate about front-end design and creating clean, user-friendly experiences. I enjoy experimenting with visuals that make projects stand out.  
-At the same time, I’m expanding into back-end development so I can bring my designs to life with real functionality and learn the full stack.
-
-## Currently Learning
-- 🤖 AI collaboration and prompt engineering  
-- 🔄 GitHub workflows and version control  
-- 🧠 Building my first AI assistants  
-
-## Tech & Tools
-![AI](https://img.shields.io/badge/AI-black?style=flat&logo=openai)
-![Python](https://img.shields.io/badge/Python-blue?style=flat&logo=python)
-![Java](https://img.shields.io/badge/Java-orange?style=flat&logo=coffeescript)
-![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-blue?style=flat&logo=css3)
-![Git](https://img.shields.io/badge/Git-black?style=flat&logo=git)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)
-
 ## Projects / Assignments
 
-### • C.H.U.D Bot
+---
+
+## C.H.U.D Bot
 **C.H.U.D. (Connecting Hidden Unknown Dots)** — A custom AI agent designed for a class assignment.  
 🔥 Plays the role of a friendly conspiracy theorist  
 🔍 Provides helpful answers with a hidden-agenda twist  
+
+Repo folder:  
+👉 https://github.com/jcarter-dev/jcarter-dev/tree/main/CHUD-bot  
 
 Versions:
 - v1.0 — Helpful but Wild  
@@ -35,21 +16,39 @@ Versions:
 
 ---
 
-### • Project Ideation: Three AI Application Ideas
-A brainstorming assignment for my AI Fundamentals course where I’m exploring three possible AI projects to build this semester:  
-1. **AI Workflow Assistant for Java Projects** — Helps explain errors, summarize changes, and suggest small code improvements.  
-2. **AI Linux Tutor** — Breaks down commands and lab outputs from my RHCSA-style Linux work so I actually understand what’s going on.  
-3. **AI UI Theme Generator for Java Swing** — Generates colors, gradients, and UI constants based on short theme descriptions (teal, glass, dark mode, etc.).
+## Project Ideation: Three AI Application Ideas  
+A brainstorming assignment for CSC-113 where I explored three possible AI applications to build this semester:
 
-This is the early planning phase for my capstone-style AI project.
+1. **AI Workflow Assistant for Java Projects**  
+   Helps explain errors, summarize code changes, and suggest small improvements.
+
+2. **AI Linux Tutor**  
+   Breaks down Linux commands and RHCSA-style lab outputs in plain English.
+
+3. **AI UI Theme Generator for Java Swing**  
+   Generates color palettes, gradients, and Swing UI constants based on short theme descriptions  
+   (e.g., *“teal glass,” “dark mode with cyan accents,” “retro terminal green”*).
+
+Repo folder:  
+👉 https://github.com/jcarter-dev/jcarter-dev/tree/main/project-ideas  
 
 ---
 
-## Fun Fact
-I have a pet jumping spider named Pogo 🕷️ and a dog named Butter 🐶.  
-I never thought I'd have a spider and a dog as roommates, but here we are 😅.
+## AI UI Theme Generator (MVP) — CSC-113 Assignment
+This is my working MVP for the semester — built through rapid prototyping, iteration logs, and GitHub workflows.
 
-## Find Me
-- 📍 Right here on GitHub!  
-- 📧 Student Email: carterj2383@student.faytechcc.edu  
-- ✉️ Personal Email: jcarter.git@gmail.com  
+### 🔗 Live Demo (GitHub Pages)
+https://jcarter-dev.github.io/jcarter-dev/
+
+### 📁 Project Folder  
+https://github.com/jcarter-dev/jcarter-dev/tree/main/docs  
+
+### Key Documents
+- **PRD.md** — Product Requirements Document  
+  https://github.com/jcarter-dev/jcarter-dev/blob/main/docs/PRD.md  
+
+- **Prototype Testing**  
+  https://github.com/jcarter-dev/jcarter-dev/blob/main/docs/PROTOTYPE_TESTING.md  
+
+- **Iteration Log**  
+  https://github.com/jcarter-dev/jcarter-dev/blob/main/docs/ITERATION_LOG.md  
