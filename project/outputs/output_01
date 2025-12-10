@@ -1,0 +1,5 @@
+This was the explanation the AI gave me when I asked about SSH earlier in the semester.
+
+SSH stands for Secure Shell. It is a way for you to connect to another computer over the network in a safe and encrypted way. Once connected you can run commands on that machine like you are sitting in front of it. The encryption keeps other people from seeing what you type or what you get back.
+
+It helped me understand the bigger picture without getting lost in small details.
