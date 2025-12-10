@@ -1,0 +1,13 @@
+This is an example of a theme snippet the AI produced when I asked for a dark teal theme.
+
+Generated Snippet:
+public static final Color PRIMARY      = new Color(0x0F9FBF);
+public static final Color SECONDARY    = new Color(0x062B3A);
+public static final Color ACCENT       = new Color(0x5EEAD4);
+public static final Color BACKGROUND   = new Color(0x020617);
+
+// button.setBackground(PRIMARY);
+// panel.setBackground(BACKGROUND);
+// label.setForeground(ACCENT);
+
+This shows the format my assistant uses to output Swing theme values.

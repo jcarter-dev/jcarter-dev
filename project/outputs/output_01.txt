@@ -1,9 +1,4 @@
-This is an example of the AI rewriting my first idea so it sounded more like a real project.
+This was the AI rewrite when I asked it to clean up the idea and make it sound more direct.
 
-Original idea
-AI tool that helps me with Java errors and code.
-
-AI rewrite
-AI Workflow Assistant for Java Projects. A small assistant that fits into my normal coding routine. It helps explain error messages in plain language, suggests cleaner ways to write certain sections, and gives short summaries of what changed between commits or versions. The goal is not to replace me. The goal is to make the process less confusing and less repetitive.
-
-This was one of the first times the idea felt like something I could actually describe and build toward.
+AI Rewrite:
+The goal is to build a small assistant that turns quick theme descriptions into usable Java Swing color systems. The AI should take short natural language prompts like “teal glass panel” or “dark mode with cyan glow” and translate that into hex values, swatches, and a starter theme snippet. The tool focuses on fast idea generation, not full UI design.

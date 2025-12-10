@@ -1,9 +1,10 @@
-This was the AI helping me break the idea into simple features for a prototype.
+This is the output I got when I asked the AI to break the idea into simple features for a first prototype.
 
-Feature List the AI Suggested:
-Explain error messages in plain language
-Highlight parts of the code that look messy or confusing
-Suggest cleaner structure or small improvements
-Give short summaries of what changed between edits
+AI Breakdown:
+1. Parse short theme descriptions and detect keywords such as teal, dark, neon, sunset, etc.
+2. Map those keywords to a small set of predefined palettes.
+3. Render a visual preview so the user can see what the theme might look like.
+4. Generate a Java Swing snippet with Color() constants for PRIMARY, SECONDARY, ACCENT, and BACKGROUND.
+5. Provide a one-click copy button for the snippet.
 
-It also said a basic prototype could be done by focusing on the first two features only. This made the project feel manageable instead of overwhelming.
+This helped me understand what a basic version of the tool should focus on.

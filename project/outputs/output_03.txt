@@ -1,0 +1,4 @@
+This was the AI response when I asked for a realistic scope for a student prototype.
+
+AI Scope:
+A simple version can be built in one to two weeks. Start with a static list of themes and keyword matches. The preview can be plain HTML and CSS with simple boxes showing the colors. The Java snippet does not need logic beyond printing Color hex values. Keep the focus on translating the user's prompt into a visual theme and a usable code snippet.
