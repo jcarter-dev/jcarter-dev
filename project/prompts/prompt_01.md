@@ -1,12 +1,12 @@
 # Prompt Example One
 
-This was from the beginning of the course when I was still figuring out how to talk to the AI.
+This was from the start of the project when I was using AI to help me understand Java concepts.
 
 Goal  
-Get a basic explanation that I could understand without it sounding too technical.
+Get a simple explanation that made sense without jargon.
 
 Prompt I used  
-Can you explain SSH in simple terms. I kind of get it but need a clearer picture.
+Can you explain what a Java class actually does. I know the definition but I want a version that feels clearer.
 
 What happened  
-The AI explained it but it felt really plain. This is when I realized I needed to give more direction if I wanted answers I could actually use for class.
+The AI explained it in a way that finally clicked. This is where I realized I could use the assistant to clean up concepts that felt confusing in the textbook.

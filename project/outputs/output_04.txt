@@ -1,9 +1,0 @@
-This is the kind of output the AI gave me when I was working on my Better Bot assignment.
-
-I asked it:
-I want to make a better version of the personal assistant bot idea. Something that feels more helpful and less generic. Can you help me shape it.
-
-The AI responded with this:
-A more effective assistant bot should have a clear purpose and a defined personality. Start by choosing a single primary function such as reminders, studying help, or organizing tasks. Give it a tone that matches the user. For example calm and supportive or direct and straightforward. Once you have a purpose and tone you can add extra features like small explanations, summaries, or suggestions based on the user’s habits.
-
-This helped me focus the idea. I stopped trying to make a bot that did everything and instead built around one strong purpose.

@@ -1,9 +1,0 @@
-This is an example of the AI cleaning up my writing during the course. I asked it to make the paragraph clearer and sound more like me.
-
-Original
-I know what this means but the explanation feels too long and kind of confusing. Can you help me rewrite this so it’s more direct.
-
-AI Rewrite
-This topic isn’t as complicated as it sounds. Here is the simple version. Focus on the main idea and ignore the noise around it. Once you understand the core concept the rest makes more sense.
-
-This was one of the first times the AI got closer to my tone.

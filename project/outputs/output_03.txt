@@ -1,5 +1,0 @@
-This is the type of answer the AI gave me when I asked for help reflecting on my work.
-
-The biggest thing you learned is how important it is to be specific with your prompts. The AI isn’t guessing your intentions. It follows whatever structure you give it. Once you started directing tone, style, and length you got much better results.
-
-This showed me how different the output is when I give real instructions.
