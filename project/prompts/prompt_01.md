@@ -1,12 +1,12 @@
 # Prompt Example One
 
-This was the first stage of the project where I needed ideas for an AI tool that actually fit into my Java work.
+This was the start of the project when I was trying to come up with ideas I could actually build for class.
 
 Goal  
-Come up with simple, realistic AI project ideas that matched what I already do in class.
+Get AI project ideas that made sense for something I already do which is Java UI work.
 
 Prompt I used  
-Can you give me a few AI project ideas that would make sense for someone working in Java. Nothing huge. Just something useful.
+Give me a few AI project ideas that connect to Java and design. Something simple enough to prototype but still useful.
 
 What happened  
-The AI gave me a short list of ideas. One of them became the AI Workflow Assistant for Java Projects. That is the idea I decided to build my project around.
+One of the ideas was an AI tool that could help with Java UI themes. That idea eventually turned into the Swing Theme Generator prototype I built.

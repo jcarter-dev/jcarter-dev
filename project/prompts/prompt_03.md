@@ -1,12 +1,12 @@
 # Prompt Example Three
 
-This prompt came from the stage where I needed to shape the assistant into something with real features and a manageable scope.
+This prompt came from when I needed to define what the prototype would actually include.
 
 Goal  
-Break the assistant into simple features and figure out what a prototype version should actually include.
+Break the project into simple features I could implement in a short amount of time.
 
 Prompt I used  
-Take this idea and turn it into a small feature list. Keep it simple enough for a first prototype. What should the assistant do, and what is realistic for a short build.
+Give me a small feature list for the UI Theme Generator. Just enough to make it a prototype. No big systems. Keep it practical.
 
 What happened  
-The AI suggested a few core features: explain errors in plain language, point out cleaner ways to structure code, highlight sections that might cause bugs, and summarize small changes. It also helped me define how much work a basic version would take. This made the project feel achievable.
+The AI suggested the core features I ended up building: text input for theme descriptions, a simple rule-based theme picker, color swatches, a Swing-style mock UI, and a generated Java snippet. This is exactly what made it into the prototype.
