@@ -1,12 +1,12 @@
 # Prompt Example One
 
-This is one of my early prompts from the start of the course.
+This was from the beginning of the course when I was still figuring out how to talk to the AI.
 
 Goal  
-Get the AI to explain something in a way I could actually use for class without sounding robotic.
+Get a basic explanation that I could understand without it sounding too technical.
 
 Prompt I used  
-Explain this topic like you are talking to someone who understands the basics but needs the bigger picture. Keep it simple and keep the flow natural.
+Can you explain SSH in simple terms. I kind of get it but need a clearer picture.
 
 What happened  
-The AI gave me a decent answer but it still felt generic. This is when I learned that if I do not give it tone and intent it will default to something plain. It pushed me to start thinking about prompting as a real skill instead of just asking a question.
+The AI explained it but it felt really plain. This is when I realized I needed to give more direction if I wanted answers I could actually use for class.
