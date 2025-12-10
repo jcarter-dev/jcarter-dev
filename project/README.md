@@ -12,7 +12,6 @@ About seventy percent of the way to the version I had in my head. Some things fe
 ## AI Tools I Used
 ChatGPT  
 Gemini  
-Claude  
 GitHub Copilot  
 
 Each tool had a different purpose. Drafting. Editing. Debugging. Rephrasing. Generating visuals. The real growth came from learning how to steer them.
