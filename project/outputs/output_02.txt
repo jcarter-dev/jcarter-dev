@@ -1,0 +1,9 @@
+This was the AI helping me break the idea into simple features for a prototype.
+
+Feature List the AI Suggested:
+Explain error messages in plain language
+Highlight parts of the code that look messy or confusing
+Suggest cleaner structure or small improvements
+Give short summaries of what changed between edits
+
+It also said a basic prototype could be done by focusing on the first two features only. This made the project feel manageable instead of overwhelming.
